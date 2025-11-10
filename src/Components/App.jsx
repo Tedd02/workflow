@@ -6,13 +6,15 @@ import Footer from './Footer'
 import Cart from './Cart'
 
 function App() {
-  
+
+  const [cart, updateCart] = useState([])
+
   return (
     <div class="m-0">
       <Banner/>
       <div class='flex flex-row'>
-        <Cart/>
-        <ShoppingList/>
+        <Cart cart={cart} updateCart={updateCart} />
+        <ShoppingList cart={cart} updateCart={updateCart} />
       </div>
       <Footer/>
     </div>
