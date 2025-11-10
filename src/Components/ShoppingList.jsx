@@ -13,13 +13,13 @@ function ShoppingList() {
 	)
 
   return (
-    <div>
+    <div class='w-full'>
         <ul>
 			{categories.map((cat) => (
 				<li key={cat}>{cat}</li>
 			))}
 		</ul>
-		<ul class='list-none p-8 flex flex-wrap max-w-[800px]'>
+		<ul class='list-none p-8 grid grid-cols-4'>
 			{plantList.map(({ id, cover, name, water, light }) => (
                 <PlantItem
                     id={id}

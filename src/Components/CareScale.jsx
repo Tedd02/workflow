@@ -20,6 +20,7 @@ function CareScale({ scaleValue, careType }) {
 
 	return (
 		<div
+            class='flex'
 			onClick={() =>
 				alert(
 					`Cette plante requiert ${quantityLabel[scaleValue]} ${
