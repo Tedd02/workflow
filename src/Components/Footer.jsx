@@ -20,6 +20,7 @@ function Footer() {
 			</div>
 			<div class='mb-2.5'>Laissez-nous votre mail :</div>
 			<input
+				class='border rounded-xs'
 				placeholder='Entrez votre mail'
 				onChange={handleInput}
 				value={inputValue}
