@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Cart({ cart, updateCart }) {
 	//const monsteraPrice = 8
@@ -8,6 +8,10 @@ function Cart({ cart, updateCart }) {
 		(acc, plantType) => acc + plantType.amount * plantType.price,
 		0
 	)
+
+	useEffect(() => {
+		document.title = `LMJ: ${total}€ d'achats`
+	}, [total])
 
 	return isOpen ? (
 		<div class='text-white bg-[#31b572] p-8 w-[250px] flex flex-col justify-start'>
